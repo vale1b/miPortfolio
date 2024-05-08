@@ -3,7 +3,8 @@
 
 📝 Acerca de Mí
 
-    - Hola, soy Valentin, Soy un apasionado por la tecnologia y la programacion web. Estoy en la busqueda constante de mi mejor version y siempre persigo la excelencia.
+    - Hola, soy Valentin, Soy un apasionado por la tecnologia y la programacion web. 
+      Estoy en la busqueda constante de mi mejor version y siempre persigo la excelencia.
 
 💼 Mis Habilidades
 
