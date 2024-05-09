@@ -2,19 +2,34 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Badge from '../components/Badge.astro';
+import LinkedInIcon from '../components/icons/LinkedIn.astro';
+import SocialPill from '../components/SocialPill.astro';
+import GitHubIcon from '../components/icons/GitHub.astro';
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
 		<section class="w-full mx-auto lg:w-[740px] py-44">
-			<h1 class="text-black text-5xl font-bold flex flex-row gap-x-4 pb-4">Hey, soy Valentin 
-				<div class="flex justify-center items-center">
-					<Badge>Disponible para trabajar</Badge></h1>
-				</div>
-			<h2 class="text-xl opacity-80">
+			<img class="rounded-full w-14 h-14 mb-4"src="/img/imagenCV.jpg" alt="valentin photo">
+			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">Hey, soy Valentin 
+				<a href="https://www.linkedin.com/in/valenbarberis/" target="_blank" rel="noopener" class="flex justify-center items-center">
+					<Badge>Disponible para trabajar</Badge>
+				</a>
+			</h1>
+			<h2 class="text-white text-2xl opacity-80 text-wrap">
 			Soy un apasionado por la tecnologia y la programacion web. 
 			Estoy en la busqueda constante de mi mejor version y siempre persigo la excelencia.
 			</h2>
+			<nav class="flex gap-x-2 mt-8">
+				<SocialPill href="https://www.linkedin.com/in/valenbarberis/">
+					<LinkedInIcon class="w-6 h-6" />
+					LinkedIn
+				</SocialPill>
+				<SocialPill href="https://github.com/vale1b">
+					<GitHubIcon class="w-6 h-6" />
+					GitHub
+				</SocialPill>
+			</nav>
 		</section>
 	</main>
 </Layout>
