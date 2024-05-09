@@ -5,12 +5,18 @@ import Badge from '../components/Badge.astro';
 import LinkedInIcon from '../components/icons/LinkedIn.astro';
 import SocialPill from '../components/SocialPill.astro';
 import GitHubIcon from '../components/icons/GitHub.astro';
+import EmailIcon from '../components/icons/Email.astro';
+import Education from '../components/Education.astro';
+import SectionContainer from '../components/SectionContainer.astro'
+import Book from '../components/icons/Book.astro';
+import Briefcase from '../components/icons/Briefcase.astro'
+import Experience from '../components/Experience.astro';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Portfolio de Valentin Barberis | Desarrollador y Programador Web.">
 	<main>
-		<section class="w-full mx-auto lg:w-[740px] py-44">
-			<img class="rounded-full w-14 h-14 mb-4"src="/img/imagenCV.jpg" alt="valentin photo">
+		<SectionContainer class="py-44 pb-24">
+			<img class="rounded-full size-20 mb-4"src="/img/imagenCV.jpg" alt="valentin photo">
 			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">Hey, soy Valentin 
 				<a href="https://www.linkedin.com/in/valenbarberis/" target="_blank" rel="noopener" class="flex justify-center items-center">
 					<Badge>Disponible para trabajar</Badge>
@@ -20,7 +26,7 @@ import GitHubIcon from '../components/icons/GitHub.astro';
 			Soy un apasionado por la tecnologia y la programacion web. 
 			Estoy en la busqueda constante de mi mejor version y siempre persigo la excelencia.
 			</h2>
-			<nav class="flex gap-x-2 mt-8">
+			<nav class="flex gap-x-4 mt-8">
 				<SocialPill href="https://www.linkedin.com/in/valenbarberis/">
 					<LinkedInIcon class="w-6 h-6" />
 					LinkedIn
@@ -29,8 +35,26 @@ import GitHubIcon from '../components/icons/GitHub.astro';
 					<GitHubIcon class="w-6 h-6" />
 					GitHub
 				</SocialPill>
+				<SocialPill>
+					<EmailIcon class="w-6 h-6" />
+					barberisvalentin56@gmail.com
+				</SocialPill>
 			</nav>
-		</section>
+		</SectionContainer>
+		<SectionContainer>
+			<h2 class="text-white text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Book class="size-7"/>
+				Educación
+			</h2>
+			<Education />
+		</SectionContainer>
+		<SectionContainer>
+			<h2 class="text-white text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Briefcase class="size-7"/>
+				Experiencia Laboral
+			</h2>
+			<Experience />
+		</SectionContainer>
 	</main>
 </Layout>
 

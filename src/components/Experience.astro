@@ -1,0 +1,21 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+    {
+        date: 'Febrero 2020 - Noviembre 2020',
+        title: '"Vale lo limpio"',
+        description: 'Emprendimiento familiar dedicado a la comercializacion de productos de limpieza.'
+    }
+]
+---
+<ol class="relative border-s border-gray-200 dark:border-gray-700">                  
+    {
+        EXPERIENCE.map(experience => (
+            <li class="mb-10 ms-4">
+                <ExperienceItem {...experience}/>
+            </li>
+        ))
+    }
+        
+</ol>

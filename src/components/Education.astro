@@ -1,0 +1,30 @@
+---
+import type { Code, Debug } from "astro:components"
+import EducationItem from "./EducationItem.astro"
+
+const EDUCATION = [ 
+    {
+        date: '2009 - 2016',
+        title: 'Escuela de enseñanza primaria Escuela N.ª 475 Bernardino Rivadavia'
+    },
+    {
+        date: '2017 - 2021',
+        title: 'Colegio Catolico San Jose de Rafaela (Modalidad: informatico)'
+    },
+    {
+        date: '2023 - 2024',
+        title: 'Curso de Desarrollador Web en Digital House'
+    }
+]
+---
+<ol class="relative border-s border-gray-200 dark:border-gray-700">                  
+    {
+        EDUCATION.map(education => (
+            <li class="mb-10 ms-4">
+                <EducationItem {...education}/>
+            </li>
+        ))
+    }
+        
+</ol>
+
