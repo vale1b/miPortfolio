@@ -14,29 +14,29 @@ import Experience from '../components/Experience.astro';
 ---
 
 <Layout title="Portfolio de Valentin Barberis | Desarrollador y Programador Web.">
-	<main>
+	<main class="px-4">
 		<SectionContainer id="top"class="py-44 pb-24">
 			<img class="rounded-full size-20 mb-4"src="/img/imagenCV.jpg" alt="valentin photo">
-			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">Hey, soy Valentin 
+			<h1 class="text-white text-2xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">Hey, soy Valentin 
 				<a href="https://www.linkedin.com/in/valenbarberis/" target="_blank" rel="noopener" class="flex justify-center items-center">
 					<Badge>Disponible para trabajar</Badge>
 				</a>
 			</h1>
-			<h2 class="text-white text-2xl opacity-80 text-wrap">
+			<h2 class="text-white text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">
 			Soy un apasionado por la tecnologia y la programacion web. 
 			Estoy en la busqueda constante de mi mejor version y siempre persigo la excelencia.
 			</h2>
-			<nav class="flex gap-x-4 mt-8">
+			<nav class="flex gap-4 mt-8 flex-wrap">
 				<SocialPill href="https://www.linkedin.com/in/valenbarberis/">
-					<LinkedInIcon class="w-6 h-6" />
+					<LinkedInIcon class="size-4 md:size-6" />
 					LinkedIn
 				</SocialPill>
 				<SocialPill href="https://github.com/vale1b">
-					<GitHubIcon class="w-6 h-6" />
+					<GitHubIcon class="size-4 md:size-6" />
 					GitHub
 				</SocialPill>
 				<SocialPill>
-					<EmailIcon class="w-6 h-6" />
+					<EmailIcon class="size-4 md:size-6" />
 					barberisvalentin56@gmail.com
 				</SocialPill>
 			</nav>
