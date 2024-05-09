@@ -15,7 +15,7 @@ import Experience from '../components/Experience.astro';
 
 <Layout title="Portfolio de Valentin Barberis | Desarrollador y Programador Web.">
 	<main>
-		<SectionContainer class="py-44 pb-24">
+		<SectionContainer id="top"class="py-44 pb-24">
 			<img class="rounded-full size-20 mb-4"src="/img/imagenCV.jpg" alt="valentin photo">
 			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">Hey, soy Valentin 
 				<a href="https://www.linkedin.com/in/valenbarberis/" target="_blank" rel="noopener" class="flex justify-center items-center">
@@ -41,14 +41,14 @@ import Experience from '../components/Experience.astro';
 				</SocialPill>
 			</nav>
 		</SectionContainer>
-		<SectionContainer>
+		<SectionContainer id="educacion">
 			<h2 class="text-white text-2xl font-semibold mb-6 flex gap-x-3 items-center">
 				<Book class="size-7"/>
 				Educación
 			</h2>
 			<Education />
 		</SectionContainer>
-		<SectionContainer>
+		<SectionContainer id="experiencia">
 			<h2 class="text-white text-2xl font-semibold mb-6 flex gap-x-3 items-center">
 				<Briefcase class="size-7"/>
 				Experiencia Laboral
