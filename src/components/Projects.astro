@@ -1,0 +1,142 @@
+---
+import HTML from "./icons/Html.astro";
+import CSS from "./icons/Css.astro";
+import JAVASCRIPT from "./icons/Javascript.astro";
+import REACT from "./icons/React.astro";
+import NODE from "./icons/Node.astro";
+import EXPRESS from "./icons/Express.astro";
+import MYSQL from "./icons/Mysql.astro";
+import LinkButton from "./LinkButton.astro";
+import Link from "./icons/Link.astro";
+import GitHub from "./icons/GitHub.astro";
+
+const TAGS = {
+  HTML: {
+    name: "HTML",
+    icon: HTML,
+    class: "bg-[#003159] text-white",
+  },
+  CSS: {
+    name: "CSS",
+    icon: CSS,
+    class: "bg-[#003159] text-white",
+  },
+  JAVASCRIPT: {
+    name: "Javascript",
+    icon: JAVASCRIPT,
+    class: "bg-[#003159] text-white",
+  },
+  REACT: {
+    name: "React",
+    icon: REACT,
+    class: "bg-[#003159] text-white",
+  },
+  NODE: {
+    name: "Node.js",
+    icon: NODE,
+    class: "bg-[#003159] text-white",
+  },
+  EXPRESS: {
+    name: "Express",
+    icon: EXPRESS,
+    class: "bg-[#003159] text-white",
+  },
+  MYSQL: {
+    name: "MySQL",
+    icon: MYSQL,
+    class: "bg-[#003159] text-white",
+  },
+};
+const PROJECTS = [
+  {
+    title: "Tienda Hommies",
+    description:
+      "Proyecto en desarrollo: Una aplicación web dedicada a la venta de ropa que busca ofrecer una experiencia de compra intuitiva y atractiva. Con una interfaz amigable, estamos trabajando para brindar una experiencia de compra conveniente para los usuarios. ¡Estén atentos para más actualizaciones!",
+    link: "",
+    github: "https://github.com/EnzoSz/Grupo_14_Tienda_Ropa",
+    image: "/img/projects/408shots_so.png",
+    tags: [
+      TAGS.JAVASCRIPT,
+      TAGS.HTML,
+      TAGS.CSS,
+      TAGS.NODE,
+      TAGS.EXPRESS,
+      TAGS.MYSQL,
+    ],
+  },
+  {
+    title: "MercadoLiebre",
+    description:
+      "El objetivo fue crear una versión simplificada de MercadoLibre, un popular mercado en línea.",
+    link: "https://valentinbarberis-mercadoliebre.onrender.com/",
+    github: "https://github.com/vale1b/MercadoLiebre",
+    image: "/img/projects/575shots_so.png",
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.NODE, TAGS.EXPRESS],
+  },
+  {
+    title: "Tic Tac Toe",
+    description:
+      "Desarrollé un juego de Ta-Te-Ti (Tic Tac Toe) utilizando React.js como herramienta principal. El juego cuenta con un tablero interactivo donde los jugadores pueden alternar entre X y O. Utilicé el hook useState para gestionar el estado del tablero y el turno de los jugadores, permitiendo también el almacenamiento local de la partida en caso de recarga de la página. Además, implementé lógica para verificar ganadores y empates, con una animación de confetti para celebrar la victoria. ¡Disfruta de una experiencia clásica de Ta-Te-Ti con un toque moderno!",
+    link: "",
+    github: "https://github.com/vale1b/ticTacToe",
+    image: "/img/projects/621shots_so.png",
+    tags: [TAGS.REACT],
+  }
+]
+---
+
+<div class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map(({ title, description, link, github, image, tags }) => (
+      <article class="flex flex-col space-x-0 space-y-8  group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/2">
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+            <img
+              alt={title}
+              class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+              loading="lazy"
+              src={image}
+            />
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 md:max-w-lg">
+          <h3 class="text-lg font-semibold text-yellow-200 mt-2">
+            {title}
+          </h3>
+          <div class="flex flex-wrap mt-2">
+            <ul class="flex flex-row flex-wrap mb-2 gap-x-2">
+              {tags.map((tag) => (
+                <li class="mb-2">
+                  <span
+                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                  >
+                    <tag.icon class="size-4" />
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <div class="mb-4 text-base font-normal text-gray-200 text-pretty">
+              {description}
+            </div>
+            <footer class="flex items-end justify-start mt-4 gap-x-4">
+              {github && (
+                <LinkButton href={github}>
+                  <GitHub class="size-6" />
+                  Code
+                </LinkButton>
+              )}
+              {link && (
+                <LinkButton href={link}>
+                  <Link class="size-4" />
+                  Preview
+                </LinkButton>
+              )}
+            </footer>
+          </div>
+        </div>
+      </article>
+    ))
+  }
+</div>

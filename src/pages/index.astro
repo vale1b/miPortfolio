@@ -11,6 +11,8 @@ import SectionContainer from '../components/SectionContainer.astro'
 import Book from '../components/icons/Book.astro';
 import Briefcase from '../components/icons/Briefcase.astro'
 import Experience from '../components/Experience.astro';
+import Code from '../components/icons/Code.astro';
+import Projects from "../components/Projects.astro";
 ---
 
 <Layout title="Portfolio de Valentin Barberis | Desarrollador y Programador Web.">
@@ -42,18 +44,27 @@ import Experience from '../components/Experience.astro';
 			</nav>
 		</SectionContainer>
 		<SectionContainer id="educacion">
-			<h2 class="text-white text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+			<h2 class="text-white text-3xl font-semibold mb-6 flex gap-x-3 items-center">
 				<Book class="size-7"/>
 				Educación
 			</h2>
 			<Education />
 		</SectionContainer>
 		<SectionContainer id="experiencia">
-			<h2 class="text-white text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+			<h2 class="text-white text-3xl font-semibold mb-6 flex gap-x-3 items-center">
 				<Briefcase class="size-7"/>
 				Experiencia Laboral
 			</h2>
 			<Experience />
+		</SectionContainer>
+		<SectionContainer id="proyectos">
+			<h2
+			  class="text-white text-3xl font-semibold mb-6 flex gap-x-3 items-center"
+			>
+			  <Code class="size-7" />
+			  Proyectos
+			</h2>
+			<Projects />
 		</SectionContainer>
 	</main>
 </Layout>
